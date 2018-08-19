@@ -6,8 +6,8 @@
     reg err1= 1;
     reg err2= 1;
     // must fail unless all tests are covered
-    initial begin // sin initial tira error ....
-        #1;
+    initial begin
+        #1; // wait until the input is fetched 
         if( in1>=0 && in1<=9 )begin
             assign err1=0;
         end
