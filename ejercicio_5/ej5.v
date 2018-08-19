@@ -9,21 +9,30 @@ initial begin // begin = {  end = }
     assign input_err = 0;
 
     aux=$value$plusargs("in=%b", in);
-
-    $display("in's value is:"); 
-    $display(in);
-    $display("somex's value is:");
-    $display(somex);
-    
     begin
-        if(in === somex)
-            assign input_err=1; 
+        if(in === somex)begin
+            assign input_err=1;
+        end 
+        else
+        if(in>9 || in<0)begin
+            assign input_err=1;
+        end
     end
 
-    // the case when it's a valid input but greater than 9 in decimal is not being treated
-    // option1: take the number in decimal and then get binary
     
-    $display("input error is:",input_err);
+    begin 
+        if(input_err == 0)begin
+            $display("No input errors! way to go! :).");
+        end
+        else if(input_err==1)
+            $display("There is an input error. I'm sorry :(.");
+        begin
+
+        end
+    end
+    // the problem now is when a binary number is entered that has more than 4 bits
+    $display("The number you entered is: ",in);
+
 
     $finish; //kind of a return 0;
     

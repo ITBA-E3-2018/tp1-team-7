@@ -1,0 +1,40 @@
+j@king:~/tp1-team-7/ejercicio_5$ ./a.out
+
+j@king:~/tp1-team-7/ejercicio_5$ ./a.out +
+
+j@king:~/tp1-team-7/ejercicio_5$ ./a.out +12
+
+j@king:~/tp1-team-7/ejercicio_5$ ./a.out +a=12
+
+j@king:~/tp1-team-7/ejercicio_5$ ./a.out +in=12
+
+j@king:~/tp1-team-7/ejercicio_5$ ./a.out +in=1001
+
+j@king:~/tp1-team-7/ejercicio_5$ ./a.out +in=9
+
+j@king:~/tp1-team-7/ejercicio_5$ ./a.out +in=1001
+
+j@king:~/tp1-team-7/ejercicio_5$ ./a.out +in=10010
+
+j@king:~/tp1-team-7/ejercicio_5$ ./a.out +in=-10010
+
+j@king:~/tp1-team-7/ejercicio_5$ ./a.out +in=1001
+
+j@king:~/tp1-team-7/ejercicio_5$ ./a.out +in=1111
+
+j@king:~/tp1-team-7/ejercicio_5$ ./a.out +in=1000
+
+j@king:~/tp1-team-7/ejercicio_5$ ./a.out +in=1.5
+
+j@king:~/tp1-team-7/ejercicio_5$ ./a.out +in=1,5
+
+j@king:~/tp1-team-7/ejercicio_5$ ./a.out +in=asd
+
+j@king:~/tp1-team-7/ejercicio_5$ ./a.out +in='asd'
+
+j@king:~/tp1-team-7/ejercicio_5$ ./a.out +in=100001
+
+j@king:~/tp1-team-7/ejercicio_5$ ./a.out +in=-100001
+
+j@king:~/tp1-team-7/ejercicio_5$ ./a.out +in=100001
+
