@@ -266,7 +266,10 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT ImplementacionEj2_NOR.PDF
+INPUT ./ImplementacionEj2_NOR.PDF
 OUTPUT ej2.pdf
+INPUT ./ImplementacionEj2_NOR.PDF
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/fourier/futr8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/futr8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/fourier-alt.tfm
