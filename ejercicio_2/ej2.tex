@@ -87,15 +87,50 @@ compuertas AND, OR y NOT, como se muestra a continuación.
 
 \begin{figure}[H]
     \begin{centering}
-    \includegraphics[width=\textwidth]{ImplementacionEj2_NOR}
+    \includegraphics[width=1\textwidth]{ImplementacionEj2}
     \par\end{centering}
     \caption{Circuito lógico de implementación para $f(d,c,b,a)$ - Realizado en Proteus 7.8}
 \end{figure}
 
 Para la implementación mediante el uso de sólo compuertas NOR, primero 
 se debe trabajar un poco con la función obtenida aplicando las propiedades 
-de De Moivre:
+del álgebra booleana. Partiendo de la función original:
+\[
+    f(d,c,b,a)=(\overline{d} \cdot \overline{c} \cdot b)+
+    (\overline{d} \cdot c \cdot \overline{a})+
+    (d \cdot c \cdot \overline{b})+  
+    (d \cdot \overline{c} \cdot a)  
+\]
+\par
+Se niega dos veces los términos con productos entre las variables, 
+para mantener la igualdad:
+\[
+    f(d,c,b,a)=\overline{\overline{(\overline{d} \cdot \overline{c} \cdot b)}}+
+    \overline{\overline{(\overline{d} \cdot c \cdot \overline{a})}}+
+    \overline{\overline{(d \cdot c \cdot \overline{b})}}+
+    \overline{\overline{(d \cdot \overline{c} \cdot a)  }}
+\]
+\par
+Posteriormente se aplica a los productos sólo una de las negaciones, de 
+manera tal de transformar el producto en una suma (De Moivre):
+\[
+    \boxed{f(d,c,b,a)=\overline{(d+c+\overline{b})}+
+    \overline{(d+\overline{c}+a)}+
+    \overline{(\overline{d}+\overline{c}+b)}+
+    \overline{(\overline{d}+c+\overline{a})}}    
+\]
+\par
 
+Teniendo ahora la expresión de la función en términos de sumas, es posible 
+implementar el circuito con solamente compuertas NOR, como se muestra 
+a continuación.
 
+\begin{figure}[H]
+    \begin{centering}
+    \includegraphics[width=1\textwidth]{ImplementacionEj2_NOR}
+    \par\end{centering}
+    \caption{Circuito lógico de implementación para $f(d,c,b,a)$ 
+    con compuertas NOR - Realizado en Proteus 7.8}
+\end{figure}
 
 \end{document}
