@@ -1,4 +1,4 @@
-module main ; // wtf with this ;
+module main ; 
 // the problem now is when a binary number is entered that has more than 4 bits
 reg aux;
 reg [3:0] in1;
@@ -6,18 +6,13 @@ reg [3:0] in2;
 reg [7:0] ans;
 wire input_err=0;
 
-
+    check_err mod1(in1,input_err);
+    check_err mod2(in2,input_err);
 
     initial begin // begin = {  end = } 
 
         aux=$value$plusargs("in1=%b", in1);
         aux=$value$plusargs("in2=%b", in2);
-        $finish; //kind of a return 0;
-    end
-    check_err mod1(in1,input_err);
-    check_err mod2(in2,input_err);
-
-    initial begin
 
         begin 
             if(input_err == 0)begin
@@ -35,7 +30,8 @@ wire input_err=0;
         $display("First number: %b",in1);
         $display("First number: %b",in2);
         $display("ans : %b", ans);
+
+        $finish; //kind of a return 0;<
     end
 
 endmodule // End of Module hello_world
-
