@@ -1,41 +1,37 @@
-module main ; // wtf with this ;
+module main ; 
+// the problem now is when a binary number is entered that has more than 4 bits
 reg aux;
-reg [3:0] in;
-reg [3:0] somex;
-reg input_err;
-initial begin // begin = {  end = } 
+reg [3:0] in1;
+reg [3:0] in2;
+reg [7:0] ans;
+wire input_err=0;
 
+    check_err mod1(in1,input_err);
+    check_err mod2(in2,input_err);
 
-    assign input_err = 0;
+    initial begin // begin = {  end = } 
 
-    aux=$value$plusargs("in=%b", in);
-    begin
-        if(in === somex)begin
-            assign input_err=1;
-        end 
-        else
-        if(in>9 || in<0)begin
-            assign input_err=1;
+        aux=$value$plusargs("in1=%b", in1);
+        aux=$value$plusargs("in2=%b", in2);
+
+        begin 
+            if(input_err == 0)begin
+                $display("No input errors! way to go! :).");
+            end
+            else if(input_err==1)
+            begin
+                $display("There is an input error. I'm sorry :(.");
+            end
+            else
+                $display("valor de input_err : ",input_err);
         end
+        
+        ans=in1+in2+6;
+        $display("First number: %b",in1);
+        $display("First number: %b",in2);
+        $display("ans : %b", ans);
+
+        $finish; //kind of a return 0;<
     end
-
-    
-    begin 
-        if(input_err == 0)begin
-            $display("No input errors! way to go! :).");
-        end
-        else if(input_err==1)
-            $display("There is an input error. I'm sorry :(.");
-        begin
-
-        end
-    end
-    // the problem now is when a binary number is entered that has more than 4 bits
-    $display("The number you entered is: ",in);
-
-
-    $finish; //kind of a return 0;
-    
-end
 
 endmodule // End of Module hello_world
