@@ -1,18 +1,20 @@
- module check_err(in,out);
-    input [3:0] in;
-    output reg out;
-    reg [3:0] somex;
-
+ module check_err(in1,in2,out1,out2);
+    input [3:0] in1;
+    input [3:0] in2;
+    output reg out1;
+    output reg out2;
+    reg err1= 1;
+    reg err2= 1;
+    // must fail unless all tests are covered
     initial begin // sin initial tira error ....
-        if(in === somex)begin
-            assign out=1;
-        end 
-        else
-        if(in>9 || in<0)begin
-            assign out=1;
+        #1;
+        if( in1>=0 && in1<=9 )begin
+            assign err1=0;
         end
-        else begin
-            assign out=0;
+        if( in2>=0 && in2<=9 )begin
+            assign err2=0;
         end
+        assign out1=err1;
+        assign out2=err2;
     end 
  endmodule
