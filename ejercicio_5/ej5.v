@@ -20,6 +20,8 @@ initial begin // begin = {  end = }
             assign input_err=1; 
     end
 
+    // the case when it's a valid input but greater than 9 in decimal is not being treated
+    // option1: take the number in decimal and then get binary
     
     $display("input error is:",input_err);
 
