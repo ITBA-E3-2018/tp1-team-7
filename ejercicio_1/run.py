@@ -10,20 +10,20 @@ def main():
     c = sys.argv[3] #bits parte fraccionaria
 
     if not a.isdigit() or not b.isdigit() or not c.isdigit():
-        print("Non numerical parameter inserted")
+        print("ERROR: Non numerical parameter inserted")
         return 0
 
     a = int(a)
     b = int(b)
     c = int(c)
     if a != 0 and a != 1:
-        print("Invalid sign parameter")
+        print("ERROR: Invalid sign parameter")
         return 0
     if b < 0 or c < 0:
-        print("Negative amount of bits are invalid")
+        print("ERROR: Negative amount of bits are invalid")
         return 0
     if b == 0 or c == 0:
-        print("There are no bits to respresent number")
+        print("ERROR: There are no bits to respresent number")
         return 0
 
     l = 0
@@ -36,9 +36,10 @@ def main():
         l = -pow(2,b-1)
         r = pow(2,b-1)-pow(2,-c)
 
-    print("Rango: [%(l)s,%(r)s]" % {'l': l, 'r': r})
-    print("Resolucion: ", pow(2, -c))
+
+    print("Res: %(res)s | Ran: %(ran)s" % {'res':pow(2, -c),'ran':r-l})
 
 if __name__ == "__main__":
     main()
+
 
