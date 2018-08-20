@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.8.18)  20 AUG 2018 13:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.8.18)  20 AUG 2018 15:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1311,35 +1311,31 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
-
- []
-
-[2] (./ej4.aux) ) 
+] [2]
+<ImplementacionEj4.PDF, id=17, 730.09763pt x 513.28763pt>
+File: ImplementacionEj4.PDF Graphic file (type pdf)
+<use ImplementacionEj4.PDF>
+Package pdftex.def Info: ImplementacionEj4.PDF  used on input line 114.
+(pdftex.def)             Requested size: 469.47049pt x 330.05371pt.
+ [3 <./ImplementacionEj4.PDF>] (./ej4.aux) ) 
 Here is how much of TeX's memory you used:
- 15180 strings out of 494847
- 284486 string characters out of 6179080
- 338956 words of memory out of 5000000
- 18135 multiletter control sequences out of 15000+600000
+ 15194 strings out of 494847
+ 284690 string characters out of 6179080
+ 339991 words of memory out of 5000000
+ 18141 multiletter control sequences out of 15000+600000
  39670 words of font info for 59 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  57i,15n,69p,491b,841s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</u
-sr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/adobe/utopia/putri8a.pfb>
-Output written on ej4.pdf (2 pages, 50976 bytes).
+{/usr/share/texlive/texmf-dist/font
+s/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/fouri
+er/fourier-mex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fo
+urier-ms.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on ej4.pdf (3 pages, 84514 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
+ 43 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
