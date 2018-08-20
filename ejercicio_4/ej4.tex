@@ -1,0 +1,37 @@
+\input{../baseHoja}
+\input{../BaseKarnaugh}
+
+\begin{document}
+\section*{Task 4}
+    In this case we need to convert a 4-bit number into its complement 
+    to two. A truth table is built first with four outputs corresponding 
+    to the four input bits of the number complemented, as shown below.
+    \begin{table}[H]
+        \begin{center}
+        \begin{tabular}{|c|c|c|c||c|c|c|c|}
+        \hline
+        \multicolumn{4}{|c||}{4-Bit Input} & \multicolumn{4}{|c|}{2-Complement Output}
+        \\ \hline
+        $d$ & $c$ & $b$ & $a$ & $f(d)$ & $f(c)$ & $f(b)$ & $f(a)$\\
+        \hline \hline
+        0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\ \hline
+        % 0 & 0 & 0 & 1\\ \hline
+        % 0 & 0 & 1 & 0\\ \hline
+        % 0 & 0 & 1 & 1\\ \hline
+        % 0 & 1 & 0 & 0\\ \hline
+        % 0 & 1 & 0 & 1\\ \hline
+        % 0 & 1 & 1 & 0\\ \hline
+        % 0 & 1 & 1 & 1\\ \hline
+        % 1 & 0 & 0 & 0\\ \hline
+        % 1 & 0 & 0 & 1\\ \hline
+        % 1 & 0 & 1 & 0\\ \hline
+        % 1 & 0 & 1 & 1\\ \hline
+        % 1 & 1 & 0 & 0\\ \hline
+        % 1 & 1 & 0 & 1\\ \hline
+        % 1 & 1 & 1 & 0\\ \hline
+        % 1 & 1 & 1 & 1\\ \hline
+        \end{tabular}
+        \caption{Outputs with complement to two.}
+        \end{center}
+        \end{table}
+\end{document}
