@@ -109,7 +109,7 @@ module alu (operand1, operand2, opcode, result, carryflag,  overflowflag, zerofl
 
     
 
-    always @(opcode) begin
+    always @(opcode or operand1 or operand2) begin
         case(opcode)
             3'b000: {result, carryflag,  overflowflag, zeroflag, negativeflag}={sum, sum_carry, sum_ov, sum_z, sum_n}; //add
             3'b001: {result, carryflag,  overflowflag, zeroflag, negativeflag}={diff, diff_carry, diff_ov, diff_z, diff_n}; //difference
