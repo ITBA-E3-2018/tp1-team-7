@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.3.20)  19 AUG 2018 20:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.3.20)  1 SEP 2018 00:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**ej1.tex
-(/home/newtonis/tp1-team-7/ejercicio_1/ej1.tex
+**ej1_es.tex
+(/home/newtonis/tp1-team-7/ejercicio_1/ej1_es.tex
 LaTeX2e <2017-04-15>
 Babel <3.12> and hyphenation patterns for 7 language(s) loaded.
 (../baseHoja.tex (/usr/share/texlive/texmf-dist/tex/latex/extsizes/extarticle.cls
@@ -1022,8 +1022,8 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
- (/home/newtonis/tp1-team-7/ejercicio_1/ej1.aux)
-\openout1 = `ej1.aux'.
+ (/home/newtonis/tp1-team-7/ejercicio_1/ej1_es.aux)
+\openout1 = `ej1_es.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
@@ -1183,17 +1183,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
- </home/newtonis/tp1-team-7/ejercicio_1/bits.png>] (/home/newtonis/tp1-team-7/ejercicio_1/ej1.aux) ) 
+ </home/newtonis/tp1-team-7/ejercicio_1/bits.png>] (/home/newtonis/tp1-team-7/ejercicio_1/ej1_es.aux) ) 
 Here is how much of TeX's memory you used:
  16441 strings out of 494855
- 299582 string characters out of 6179189
- 333806 words of memory out of 5000000
+ 299609 string characters out of 6179189
+ 333804 words of memory out of 5000000
  19365 multiletter control sequences out of 15000+600000
  42316 words of font info for 69 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 57i,11n,54p,432b,968s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,11n,54p,435b,968s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on /home/newtonis/tp1-team-7/ejercicio_1/ej1.pdf (1 page, 89677 bytes).
+Output written on /home/newtonis/tp1-team-7/ejercicio_1/ej1_es.pdf (1 page, 90133 bytes).
 PDF statistics:
  35 PDF objects out of 1000 (max. 8388607)
  24 compressed objects within 1 object stream

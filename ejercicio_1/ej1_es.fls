@@ -3,8 +3,8 @@ INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/newtonis/tp1-team-7/ejercicio_1/ej1.tex
-OUTPUT /home/newtonis/tp1-team-7/ejercicio_1/ej1.log
+INPUT /home/newtonis/tp1-team-7/ejercicio_1/ej1_es.tex
+OUTPUT /home/newtonis/tp1-team-7/ejercicio_1/ej1_es.log
 INPUT ../baseHoja.tex
 INPUT ../baseHoja.tex
 INPUT /usr/share/texlive/texmf-dist/tex/latex/extsizes/extarticle.cls
@@ -206,9 +206,9 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
-INPUT /home/newtonis/tp1-team-7/ejercicio_1/ej1.aux
-INPUT /home/newtonis/tp1-team-7/ejercicio_1/ej1.aux
-OUTPUT /home/newtonis/tp1-team-7/ejercicio_1/ej1.aux
+INPUT /home/newtonis/tp1-team-7/ejercicio_1/ej1_es.aux
+INPUT /home/newtonis/tp1-team-7/ejercicio_1/ej1_es.aux
+OUTPUT /home/newtonis/tp1-team-7/ejercicio_1/ej1_es.aux
 INPUT /usr/share/texlive/texmf-dist/tex/latex/fourier/fmlfutm.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/fourier/fmlfutm.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/fourier/fmsfutm.fd
@@ -275,7 +275,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /home/newtonis/tp1-team-7/ejercicio_1/bits.png
 INPUT /home/newtonis/tp1-team-7/ejercicio_1/bits.png
-OUTPUT /home/newtonis/tp1-team-7/ejercicio_1/ej1.pdf
+OUTPUT /home/newtonis/tp1-team-7/ejercicio_1/ej1_es.pdf
 INPUT /home/newtonis/tp1-team-7/ejercicio_1/bits.png
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/fourier/futr8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/futr8r.tfm
@@ -311,7 +311,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/fourier/futmii.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/fourier-mlit.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/fourier-ml.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/futri8r.tfm
-INPUT /home/newtonis/tp1-team-7/ejercicio_1/ej1.aux
+INPUT /home/newtonis/tp1-team-7/ejercicio_1/ej1_es.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb

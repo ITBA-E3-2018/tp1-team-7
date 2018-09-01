@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1534723081 "ej1.tex" "/home/newtonis/tp1-team-7/ejercicio_1/ej1.pdf" "ej1" 1534723089
+["pdflatex"] 1535772103 "ej1_es.tex" "/home/newtonis/tp1-team-7/ejercicio_1/ej1_es.pdf" "ej1_es" 1535772109
   "../baseHoja.tex" 1534699754 693 aa3bd87814febd61de0a0dba2c916e39 ""
   "/etc/texmf/web2c/texmf.cnf" 1520186656 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/newtonis/tp1-team-7/ejercicio_1/ej1.aux" 1534723081 272 91f57149efc314c758f0b09357990b53 ""
+  "/home/newtonis/tp1-team-7/ejercicio_1/ej1_es.aux" 1535772103 280 a68d106c532b8db8ba9757b139eec4bb ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm" 1480098696 3584 f80ddd985bd00e29e9a6047ebd9d4781 ""
@@ -176,11 +176,11 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1534701092 2072819 ddc232a8b80da3f2a1677113779c1fba ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1521594379 811043 dabf9034717d07dd8f42c3bb8108142b ""
   "bits.png" 1534720584 55154 b1fe0ea55519b369b0cdf1ef4e7c3215 ""
-  "ej1.aux" 1534723081 272 91f57149efc314c758f0b09357990b53 ""
-  "ej1.tex" 1534723089 1899 f5073c06255d1168e0ef1d89b9d12d29 ""
+  "ej1_es.aux" 1535772103 280 a68d106c532b8db8ba9757b139eec4bb ""
+  "ej1_es.tex" 1535772103 2034 37c8806d63a3af3459d960d3954edbc6 ""
   (generated)
-  "/home/newtonis/tp1-team-7/ejercicio_1/ej1.log"
-  "/home/newtonis/tp1-team-7/ejercicio_1/ej1.pdf"
-  "ej1.pdf"
-  "ej1.aux"
-  "ej1.log"
+  "ej1_es.aux"
+  "/home/newtonis/tp1-team-7/ejercicio_1/ej1_es.log"
+  "ej1_es.log"
+  "/home/newtonis/tp1-team-7/ejercicio_1/ej1_es.pdf"
+  "ej1_es.pdf"
