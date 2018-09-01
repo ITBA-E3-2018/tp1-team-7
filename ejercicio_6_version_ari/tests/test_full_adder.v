@@ -7,6 +7,7 @@ module test_full_adder();
     full_adder my_full_adder(in1,in2,cin,out,cout);
 
     initial begin
+        $display("Running tests of full-adder");
         for (it1 = 0;it1 <= 1;it1++) begin
             for (it2 = 0;it2 <= 1;it2++) begin
                 for (it3 = 0;it3 <= 1;it3++) begin
@@ -17,6 +18,7 @@ module test_full_adder();
                 end
             end
         end
+        $display("-------------------------");
     end
 
 endmodule

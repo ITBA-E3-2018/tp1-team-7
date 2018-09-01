@@ -5,10 +5,11 @@ module test_adder_4bit();
     wire [3:0]out;
     wire carry;
 
-    adder4bit my_adder( in1 , in2 , out , carry); 
+    adder4bit my_adder( in1 , in2 ,1'b0, out , carry); 
 
 
     initial begin
+      $display("Running some tests of adder 4bit");
       in1 = 12;
       in2 = 15;
       #1 $display("in1 = %d in2 = %d out = %d carry = %d",in1,in2,out,carry);
@@ -24,5 +25,6 @@ module test_adder_4bit();
       in1 = 6;
       in2 = 7;
       #1 $display("in1 = %d in2 = %d out = %d carry = %d",in1,in2,out,carry);  
+      $display("-------------------------");
     end
 endmodule
