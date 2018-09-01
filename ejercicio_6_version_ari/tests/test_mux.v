@@ -1,15 +1,15 @@
 
 
 module test_mux();
-    reg [0:31] in;
-    reg [0:3] sel;
-    output [0:3] out;
+    reg [31:0] in;
+    reg [2:0] sel;
+    output [3:0] out;
     integer it;
 
     muxBus4 my_mux(in , sel , out);
 
     initial begin
-        $display("Running tests of mux");
+        $display("Running testing of mux");
         in[0+:4] = 12;
         in[4+:4] = 15;
         in[8+:4] = 1;

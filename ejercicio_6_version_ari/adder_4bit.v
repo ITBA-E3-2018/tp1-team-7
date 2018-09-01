@@ -1,10 +1,10 @@
 
 
-module adder4bit(in1,in2 ,cin, out , carry);
-    output carry;
+module adder4bit(in1,in2 ,cin, out , carry,overflow);
     input [3:0]in1 ,in2;
     input cin;
     output [3:0]out;
+    output overflow,carry;
     wire [3:0]aux;
 
     full_adder add1(in1[0] , in2[0] , cin    , out[0] , aux[0]);
@@ -12,5 +12,6 @@ module adder4bit(in1,in2 ,cin, out , carry);
     full_adder add3(in1[2] , in2[2] , aux[1] , out[2] , aux[2]);
     full_adder add4(in1[3] , in2[3] , aux[2] , out[3] , carry );
     
+    assign overflow = aux[2] ^ carry;
 endmodule
 
