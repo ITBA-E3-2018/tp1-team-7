@@ -2,19 +2,19 @@
 \input{../BaseKarnaugh}
 \begin{document}
 
-\section*{Ejercicio 2}
-Se parte de la siguiente función expresada en maxtérminos:
+\section*{Task 2}
+Starting with the following function expressed in maxterms:
 \[
     f(d,c,b,a)=\prod{(M_{0},M_{1},M_{5},M_{7},M_{8},M_{10},M_{14},M_{15})}
 \]
 
-Tomando como variables de entrada lógicas a $d,c,b,a$. Por simplicidad,
- se expresa la misma función en minitérminos para operar luego:
+Taking $d,c,b,a$ as input variables. For simplify, the same 
+function is expressed in minterms to operate later:
 \[
     f(d,c,b,a)=\sum{(m_{2},m_{3},m_{4},m_{6},m_{9},m_{11},m_{12},m_{13})}
 \]
 
-A partir de esta, construimos la función sin simplificar:
+Starting with it, we build the function without simplifying:
 \[
     f(d,c,b,a)=(\overline{d} \cdot \overline{c} \cdot b \cdot \overline{a})+
     (\overline{d} \cdot \overline{c} \cdot b \cdot a)+
@@ -26,7 +26,7 @@ A partir de esta, construimos la función sin simplificar:
     (d \cdot c \cdot \overline{b} \cdot a)
 \]
 
-Agrupamos por factor común en forma conveniente:
+We grouped by common factor in a convenient way:
 \begin{eqnarray}
     \nonumber f(d,c,b,a)&=&\underbrace{(\overline{d} \cdot \overline{c} \cdot b \cdot \overline{a})+
     (\overline{d} \cdot \overline{c} \cdot b \cdot a)}+\underbrace{
@@ -50,8 +50,8 @@ Agrupamos por factor común en forma conveniente:
     (d \cdot \overline{c} \cdot a)}
 \]
 \\ %Salto de linea
-Análogamente, a partir de la expresión en miniterminos reducimos la
-función mediante un mapa de Karnaugh:
+Analogously, starting with the expresssion in minterms we reduce 
+the function through a map of Karnaugh:
 
 \begin{centering}
     \begin{Karnaugh}
@@ -64,37 +64,37 @@ función mediante un mapa de Karnaugh:
     \end{Karnaugh}
 \par\end{centering}
 
-Del primer grupo (primer fila) se tene que $d$, $c$ y $b$ quedan
-constantes, por lo que el primer factor queda de la forma
+From the first group (first row) we have that $d$, $c$ and $b$ 
+are constantes, thus the first factor stays the way 
 $ \overline{d} \overline{c} b$.\par
-Del segundo grupo (segunda fila) se tiene que $d$, $c$ y $a$ son
-constantes, por lo que dicho factor queda de la forma $ \overline{d} c \overline{a}$.\par
-Del tercer grupo (tercer fila) quedan constantes $d$, $c$ y $b$, por lo
-que este factor queda de la forma $d c \overline{b}$.\par
-Finalmente, de la última fila, en el grupo se mantienen constantes
-$d$, $c$ y $a$, por lo que este último factor queda de la forma
+From the second group (second row) we have $d$, $c$ and $a$ as
+constants, thus this factor stays as $ \overline{d} c \overline{a}$.\par
+From the third group (third row) remain constant $d$, $c$ and $b$, thus 
+this factor stays as $d c \overline{b}$.\par
+Finally, from the last row, in the group $d$, $c$ and $a$ stay constant, 
+thus this factor stays the way
 $d \overline{c} a$.\par
-Sumando los términos parciales se obtiene la función buscada:
+Adding the partial termns we get the simplified function:
 \[
     \boxed{f(d,c,b,a)=(\overline{d} \cdot \overline{c} \cdot b)+
     (\overline{d} \cdot c \cdot \overline{a})+
     (d \cdot c \cdot \overline{b})+
     (d \cdot \overline{c} \cdot a)}
 \]
-Verificando asi que se llega a la misma expresión.\par
-Tomando dicha función, se la implementó en un circuito lógico mediante
-compuertas AND, OR y NOT, como se muestra a continuación.
+Wich is the same obtained by simplification by boolean algebra. \par
+Taking this function, it was implemented in a logical circuit
+ by AND, OR and NOT gates, as shown below.
 
 \begin{figure}[H]
     \begin{centering}
     \includegraphics[width=1\textwidth]{ImplementacionEj2}
     \par\end{centering}
-    \caption{Circuito lógico de implementación para $f(d,c,b,a)$ - Realizado en Proteus 7.8}
+    \caption{Logical circuit that implements $f(d,c,b,a)$ - Made in Proteus 7.8}
 \end{figure}
 
-Para la implementación mediante el uso de sólo compuertas NOR, primero
-se debe trabajar un poco con la función obtenida aplicando las propiedades
-del álgebra booleana. Partiendo de la función original:
+For implementation using only NOR gates, first we have to work
+ with the obtained function applyin boolean algebra properties. 
+ Taking the function:
 \[
     f(d,c,b,a)=(\overline{d} \cdot \overline{c} \cdot b)+
     (\overline{d} \cdot c \cdot \overline{a})+
@@ -102,8 +102,7 @@ del álgebra booleana. Partiendo de la función original:
     (d \cdot \overline{c} \cdot a)
 \]
 \par
-Se niega dos veces los términos con productos entre las variables,
-para mantener la igualdad:
+We twice denied the terms separated by sums, for keeping the equal:
 \[
     f(d,c,b,a)=\overline{\overline{(\overline{d} \cdot \overline{c} \cdot b)}}+
     \overline{\overline{(\overline{d} \cdot c \cdot \overline{a})}}+
@@ -111,8 +110,8 @@ para mantener la igualdad:
     \overline{\overline{(d \cdot \overline{c} \cdot a)  }}
 \]
 \par
-Posteriormente se aplica a los productos sólo una de las negaciones, de
-manera tal de transformar el producto en una suma (De Moivre):
+Next we deny the factors only once, for turning the products 
+into sums (property of De Moivre):
 \[
     \boxed{f(d,c,b,a)=\overline{(d+c+\overline{b})}+
     \overline{(d+\overline{c}+a)}+
@@ -121,16 +120,15 @@ manera tal de transformar el producto en una suma (De Moivre):
 \]
 \par
 
-Teniendo ahora la expresión de la función en términos de sumas, es posible
-implementar el circuito con solamente compuertas NOR, como se muestra
-a continuación.
+Having the expression in terms of sums, it is possible to implement 
+the circuit using only NOR gates, as shown below.
 
 \begin{figure}[H]
     \begin{centering}
     \includegraphics[width=1\textwidth]{ImplementacionEj2_NOR}
     \par\end{centering}
-    \caption{Circuito lógico de implementación para $f(d,c,b,a)$
-    con compuertas NOR - Realizado en Proteus 7.8}
+    \caption{Logical circuit that implements $f(d,c,b,a)$
+    with NOR gates - Made in Proteus 7.8}
 \end{figure}
 
 \end{document}

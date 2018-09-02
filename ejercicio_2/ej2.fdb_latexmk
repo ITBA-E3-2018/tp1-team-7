@@ -1,9 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1534736448 "/home/marce/Escritorio/Electro3_TPS/tp1-team-7/ejercicio_2/ej2.tex" "ej2.pdf" "ej2" 1534736448
+["pdflatex"] 1535906076 "/home/marce/Escritorio/Electro3_TPS/tp1-team-7/ejercicio_2/ej2.tex" "ej2.pdf" "ej2" 1535906077
   "../BaseKarnaugh.tex" 1534736321 7400 53bb2ed5b33f693eb80275b23b153241 ""
   "../baseHoja.tex" 1534736321 693 aa3bd87814febd61de0a0dba2c916e39 ""
   "/etc/texmf/web2c/texmf.cnf" 1534563970 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/marce/Escritorio/Electro3_TPS/tp1-team-7/ejercicio_2/ej2.tex" 1534736447 5338 47d7256862b482caa991bd0ecfceea01 ""
+  "/home/marce/Escritorio/Electro3_TPS/tp1-team-7/ejercicio_2/ej2.tex" 1535906075 5017 1de166066e6d7e43c4b5a700c1c0129a ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm" 1480098696 3584 f80ddd985bd00e29e9a6047ebd9d4781 ""
@@ -172,11 +172,11 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1534563996 813117 ae6636e879223bf3d0073ba28ef43781 ""
   "ImplementacionEj2.PDF" 1534736321 16931 e5de94c63e392c143237dde2f92a3a9f ""
   "ImplementacionEj2_NOR.PDF" 1534736321 26588 e775bdc4ddf5d9791cf5bde8a0c5f4c9 ""
-  "ej2.aux" 1534736448 395 b79a0cb2c9893bfe52a7e552a41faec7 ""
-  "ej2.tex" 1534736447 5338 47d7256862b482caa991bd0ecfceea01 ""
+  "ej2.aux" 1535906077 331 920edd5f5a908ec4dfabbfbc580b6b37 ""
+  "ej2.tex" 1535906075 5017 1de166066e6d7e43c4b5a700c1c0129a ""
   (generated)
-  "ej2.log"
-  "ej2.pdf"
-  "/home/newtonis/tp1-team-7/ejercicio_2/ej2.log"
   "ej2.aux"
+  "ej2.log"
   "/home/newtonis/tp1-team-7/ejercicio_2/ej2.pdf"
+  "/home/newtonis/tp1-team-7/ejercicio_2/ej2.log"
+  "ej2.pdf"
