@@ -9,7 +9,7 @@ module test_mux();
     muxBus4 my_mux(in , sel , out);
 
     initial begin
-        $display("Running testing of mux");
+        #1 $display("Running testing of mux");
         in[0+:4] = 12;
         in[4+:4] = 15;
         in[8+:4] = 1;

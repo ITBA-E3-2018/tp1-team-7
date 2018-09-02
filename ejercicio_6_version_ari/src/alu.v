@@ -30,15 +30,15 @@ module alu( in1 , in2 , opcode , out , flags );
     assign pre_op[8+:4] = in1 & in2;
     assign pre_op[12+:4] = in1 | in2;
     assign pre_op[20+:4] = in1 ^ in2;
-    assign pre_op[16+:4] = ~in2;
-    adder4bit my_adder3(4'b0000 , ~in2 , 1'b1 ,pre_op[24+:4] , carry3, overflow3);
-    assign pre_op[28+:4] = in2<<1;
+    assign pre_op[16+:4] = ~in1;
+    adder4bit my_adder3(4'b0000 , ~in1 , 1'b1 ,pre_op[24+:4] , carry3, overflow3);
+    assign pre_op[28+:4] = in1<<1;
     
     muxBus4 my_mux(pre_op, opcode , out);
 
     /** Now we deal with flags **/
     
-    assign flags[0] = (opcode == 0) ? carry1    : ((opcode == 1) ? carry2 : in2[3]);
+    assign flags[0] = (opcode == 0) ? carry1    : ((opcode == 1) ? carry2 : (opcode==7 ?in2[3]:0));
     assign flags[1] = (opcode == 0) ? overflow1 : ((opcode == 1) ? overflow2 : 0);
     assign flags[2] = (out == 0);
     assign flags[3] = out[3];
