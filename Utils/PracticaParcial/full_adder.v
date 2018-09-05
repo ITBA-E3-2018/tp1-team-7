@@ -15,20 +15,33 @@ module full_adder(A,B,Z,CIN,COUT);
     or(COUT,COUT1,COUT2);
 endmodule
 
-module main;
+module full_adder_4bits(a,b,z,cout,err);
+    input [3:0] a;
+    input [3:0] b;
+    output wire [3:0] cout;
+    output wire [3:0] z;
+    output wire err;
+    wire init_cin=0;
 
-    wire init_cin = 0;
-    wire [3:0] cout;
-    wire [3:0] z;
-    reg err;
-
-    reg [3:0] a;
-    reg [3:0] b;
     full_adder FirstFullAdder(a[0],b[0],z[0],init_cin,cout[0]);
     full_adder SecondFullAdder(a[1],b[1],z[1],cout[0],cout[1]);
     full_adder ThirdFullAdder(a[2],b[2],z[2],cout[1],cout[2]);
     full_adder FourthFullAdder(a[3],b[3],z[3],cout[2],cout[3]);
+    
+    assign err = a>9 || b>9;
 
+endmodule
+
+module main;
+
+    reg [3:0]a;
+    reg [3:0]b;
+    wire [3:0]z;
+    wire [3:0]cout;
+    wire err;
+    
+    full_adder_4bits BCD_sum(a,b,z,cout,err);
+    
     //half_adder hf1(aux_i[0],aux_i[1],z,cout);
     integer it;
     initial begin
@@ -36,15 +49,9 @@ module main;
         //aux_i=it;
         //#1 $display("a=%b b=%b z=%b cout=%b",aux_i[0],aux_i[1],z,cout);
         //end
-
-        a='b0001;
+        a='b1001;
         b='b0111;
+        #1 $display("z= %b%b%b%b cout=%b err=%b",z[3],z[2],z[1],z[0],cout[2],err);
 
-        if( a > 9 || b > 9 || a<0 || b<0) begin
-            err=1;
-        end
-        else begin
-            #1 $display("z= %b%b%b%b cout=%b",z[3],z[2],z[1],z[0],cout[2]);
-        end
     end
 endmodule
