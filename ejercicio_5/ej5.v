@@ -51,21 +51,36 @@ module main;
     wire init_cin=0;
     wire [3:0]cout;
     wire [3:0]z;
-    reg err;
+    reg [7:0]answer;
+    reg erra;
+    reg errb;
     reg reader;
     BCDsum_4bits sum(a,b,z,init_cin,cout);
-
+    integer i;
+        
     initial begin
         reader = $value$plusargs("a=%b", a);
         reader = $value$plusargs("b=%b", b);
         
-        assign err = a>9 || b>9;
+        assign erra = a>9;
+        assign errb = b>9;
         #1;
-        if(err)begin 
-            $display("there is an input error");
-        end
+        if(erra)begin 
+            $display("a is not a BCD digit");
+        end 
+        else if(errb) begin
+            $display("b is not a BCD digit");
+        end 
         else begin
-            $display("z= %b%b%b%b%b",cout[3],z[3],z[2],z[1],z[0]);
+            for(i=0;i<4;i=i+1)begin
+                answer[i]=z[i];
+            end
+            answer[4]=cout[3];
+            for(i=5;i<=7;i=i+1)begin 
+                answer[i]=0;
+            end
+            
+            $display("%b",answer);
         end
     end
 endmodule
