@@ -36,7 +36,7 @@ The binary decoder is a combinational logic device with n input lines and 2^{n} 
 
 \begin{figure}[H]
   \begin{centering}
-  \includegraphics[scale=1]{decoder.png}
+  \includegraphics[scale=1]{mux.png}
   \par\end{centering}
   \caption{Block Diagram of a 2^{M}:1 Multiplexer}
 \end{figure}
@@ -53,7 +53,7 @@ A multiplexer, also known as 'mux', is another combinational circuit that has 2^
 
 \begin{figure}[H]
   \begin{centering}
-  \includegraphics[scale=1]{muxtable.png}
+  \includegraphics[scale=1]{muxlogic.png}
   \par\end{centering}
   \caption{Logic Implementation of a 2:1 Mux}
 \end{figure}
@@ -61,10 +61,11 @@ A multiplexer, also known as 'mux', is another combinational circuit that has 2^
 
 \subsection*{About the code}
 
-In one hand, both mux.v and decoder.v modules, use conditional statements to describe their behaviour. This way is easier for the user to understand how the devices work.
-Each module has its own test bench which considers all possible inputs.
+In one hand, both mux.v and decoder.v, use conditional statements to describe their behavior. This way is easier for the user to understand how the devices work.
+Each module has it's own test bench which considers all possible inputs for a complete test.
 
-On the other hand, newmux.v and newdecoder.v, have a variable parameter which changes the number of inputs the devices could have. The way that they are implemented is more difficult to understand than the first one, but it is shorter. Another difference is that in this case the input is not just one bit, is an array of all the input's bits together. 
+On the other hand, newmux.v and newdecoder.v, have a variable parameter which changes the number of inputs the devices could have. The way that they are implemented is more difficult to understand than the behavioral modeling, but it is shorter. For the decoder, the shift operator resumes perfectly its function and for the mux, the index of the input array chooses the element that has to be in the output.
+In order to simplify the code, instead of N input/output lines of 1 bit, it has an array of all the input's bits together. 
   
 
 \end{document}
