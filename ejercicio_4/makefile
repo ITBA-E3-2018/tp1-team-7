@@ -16,21 +16,7 @@ OBJECTS  := $(SOURCES:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 rm       = rm -f
 
 
-# Report file
-DOCDIR = doc
-DOC_OUTPUT_FILE = pdf
-REPORT_FILE = ej4
-OTHER = *~ *.aux *.dvi *.toc *.bbl *.blg *.gz *.out *.thm *.ps *.idx *.ilg *.ind *.log *.fdb_latexmk *.fls
-
-
-all: $(BINDIR)/$(TARGET) $(SOURCES) $(DOC_OUTPUT_FILE)/$(REPORT_FILE)
-
-$(DOC_OUTPUT_FILE)/$(REPORT_FILE): 
-	latexmk -synctex=1 -interaction=nonstopmode -file-line-error -output-directory=$(DOC_OUTPUT_FILE) -pdf  $(DOCDIR)/$(REPORT_FILE).tex
-	cd $(DOC_OUTPUT_FILE)
-	rm -rf $(OTHER)
-	cd ..
-
+all: $(BINDIR)/$(TARGET) $(SOURCES)
 
 $(BINDIR)/$(TARGET): $(SOURCES)
 	@mkdir -p bin
@@ -42,7 +28,6 @@ $(BINDIR)/$(TARGET): $(SOURCES)
 clean: 
 	@$(rm) $(BINDIR)/$(TARGET)
 	@$(rm) $(BINDIR)/$(TARGET_B)
-	@$(rm) $(DOCFILE)/$(REPORT_FILE)
 	@echo "Output removed!"
 
 .PHONY: clean
