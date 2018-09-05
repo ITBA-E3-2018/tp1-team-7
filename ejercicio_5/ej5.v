@@ -50,3 +50,33 @@ module BCDsum_4bits(a,b,z,cin,cout,x);
     assign x[6]=0;
     assign x[7]=0;
 endmodule
+
+
+module main;
+    reg [3:0]a;
+    reg [3:0]b;
+    wire [3:0]z;
+    wire [7:0]answer;
+    reg erra;
+    reg errb;
+    wire cin = 0;
+    wire [3:0]cout;
+    reg reader;
+    BCDsum_4bits sum(a,b,z,cin,cout,answer);
+    initial begin
+        reader = $value$plusargs("a=%b", a);
+        reader = $value$plusargs("b=%b", b);
+        assign erra = a>9;
+        assign errb = b>9;
+        #1;
+        if(erra)begin 
+            $display("a is not a BCD digit");
+        end 
+        else if(errb) begin
+            $display("b is not a BCD digit");
+        end 
+        else begin
+            $display("%b",answer);
+        end
+    end
+endmodule
