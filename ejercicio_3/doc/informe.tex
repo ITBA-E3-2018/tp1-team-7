@@ -1,0 +1,73 @@
+\input{../../baseHoja}
+
+\begin{document}
+
+\section*{Task 3}
+
+\subsection*{Decoder}
+
+\begin{figure}[H]
+  \begin{centering}
+  \includegraphics[scale=1]{decoder.png}
+  \par\end{centering}
+  \caption{Block Diagram of a N:2^{N} Decoder}
+\end{figure}
+
+
+The binary decoder is a combinational logic device with n input lines and 2^{n} output lines, one particular combination of inputs activates one output while the remaining ones are disabled. The decoder only works when the enable input is on. Below you can find the truth table and the logic implementation of a 2 input decoder:
+
+\begin{figure}[H]
+  \begin{centering}
+  \includegraphics[scale=1]{decodertable.png}
+  \par\end{centering}
+  \caption{Truth table of a 2:4 Decoder}
+\end{figure}
+
+
+\begin{figure}[H]
+  \begin{centering}
+  \includegraphics[scale=1]{decoderlogic.png}
+  \par\end{centering}
+  \caption{Logic Implementation of a 2:4 Decoder}
+\end{figure}
+
+
+\subsection*{Multiplexer}
+
+\begin{figure}[H]
+  \begin{centering}
+  \includegraphics[scale=1]{decoder.png}
+  \par\end{centering}
+  \caption{Block Diagram of a 2^{M}:1 Multiplexer}
+\end{figure}
+
+A multiplexer, also known as 'mux', is another combinational circuit that has 2^{M} inputs, M select lines and one single output. The select input lines control which data input is connected to the output. The function of a 2 input Mux is described by the truth table shown below, as well as its logic implementation:
+
+
+\begin{figure}[H]
+  \begin{centering}
+  \includegraphics[scale=1]{muxtable.png}
+  \par\end{centering}
+  \caption{Truth table of a 2:1 Mux}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{centering}
+  \includegraphics[scale=1]{muxtable.png}
+  \par\end{centering}
+  \caption{Logic Implementation of a 2:1 Mux}
+\end{figure}
+
+
+\subsection*{Compilation}
+In order to compile the decoder and all test cases to bin folder this command must be run
+\begin{lstlisting}
+make all
+\end{lstlisting}
+
+\subsection*{Usage}
+Exceute each program inside bin folder to run test cases of each module
+
+
+
+\end{document}
