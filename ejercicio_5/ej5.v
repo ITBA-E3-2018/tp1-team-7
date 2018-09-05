@@ -28,21 +28,23 @@ module full_adder_4bits(a,b,z,cin,cout);
     full_adder FourthFullAdder(a[3],b[3],z[3],cout[2],cout[3]);
 endmodule
 
-module BCDsum_4bits(a,b,z,cin,cout);
+module BCDsum_4bits(a,b,z,cin,cout,x);
     input [3:0] a;
     input [3:0] b;
-    output wire [3:0] y;
-    output wire [7:0] z;
+    wire [3:0] y;
+    output wire [3:0] z;
     output wire [3:0] cout;
+    output wire [7:0] x;
     input wire cin;
     
     wire [3:0] aux_cout;
-    full_adder_4bits sum(a,b,y,cin,aux_cout);
-    wire [3:0]c= y > 9 ? 6 : 0;
+    full_adder_4bits sum(a,b,y,cin,aux_cout); 
+    
+    wire [3:0]c= y > 9 ? 6 : 0 ;
+    //wire [3:0]c= 0;
     full_adder_4bits another(y,c,z,1'b0,cout);
-    assign z[4]=cout[3];
-    
-    
+    assign x=z;
+    assign x[4]=aux_cout[3] || cout[3];
 endmodule
 
 module main;
@@ -50,14 +52,13 @@ module main;
     reg [3:0]b;
     wire init_cin=0;
     wire [3:0]cout;
-    wire [7:0]z;
-    reg [7:0]answer;
+    wire [3:0]z;
+    wire [7:0]answer;
     reg erra;
     reg errb;
     reg reader;
-    BCDsum_4bits sum(a,b,z,init_cin,cout);
-    integer i;
-        
+    BCDsum_4bits sum(a,b,z,init_cin,cout,answer);
+
     initial begin
         reader = $value$plusargs("a=%b", a);
         reader = $value$plusargs("b=%b", b);
@@ -72,14 +73,6 @@ module main;
             $display("b is not a BCD digit");
         end 
         else begin
-            /* for(i=0;i<4;i=i+1)begin
-                answer[i]=z[i];
-            end
-            answer[4]=cout[3];
-            for(i=5;i<=7;i=i+1)begin 
-                answer[i]=0;
-            end
-             */
             $display("%b",answer);
         end 
     end

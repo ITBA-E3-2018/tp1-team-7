@@ -1,15 +1,8 @@
 \newpage
-\section{Lists}
-
-\begin{document}
 
 \section*{Task 1}
 
-The program is called this way
-
-\begin{lstlisting}
-run a b c
-\end{lstlisting}
+The program is called this way 'run a b c'
 
 The parameters are:
 \begin{itemize}
@@ -24,7 +17,7 @@ The program logic uses simple formulas to solve the problem separately in signed
 The inituition beyond the formulas was obtained by looking at the composition of binary number.
 \begin{figure}[H]
   \begin{centering}
-  \includegraphics[scale=1]{bits.png}
+  \includegraphics[scale=1]{data/bits.png}
   \par\end{centering}
   \caption{View of the value of each bit}
 \end{figure}
@@ -41,4 +34,4 @@ And the highest when all bits are 1 except the most significant one
 $$r=2^{-c}+2^{-c+1}+...+2^{1}+1+2^{1}+...+2^{b-2}=2^{b-1}-2^{-c}$$
 Thus the resolution is $r-l=2^{b-1}-2^{-c}+2^{b-1}=2^{b}-2^{-c}$
 That is the same, that is reasonable because we can express the same amount of numbers with the same amount of bits and that doesn't depend on whether the number is signed or not
-\end{enumerate}
+

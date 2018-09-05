@@ -1,3 +1,7 @@
+//decoder (2:4)
+// x1, x2: decoder's inputs (possible values: 0 or 1)
+//a, b, c, d: decoder's outputs (possible values: 0 or 1)
+
 module decoder (x1, x2, a, b, c, d);
 
     input x1, x2;
@@ -17,7 +21,6 @@ module decoder (x1, x2, a, b, c, d);
         else begin //error
            a = 'b1; b = 'b1; c = 'b1; d = 'b1; // in case of error every output sets to logic 1
         end
-
 
       end
 

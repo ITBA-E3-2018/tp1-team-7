@@ -23,20 +23,7 @@ SOURCES_E  := $(wildcard $(SRCDIR)/*.v $(SRCDIR)/tests/test_mux.v )
 OBJECTS  := $(SOURCES:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 rm       = rm -f
 
-# Report file
-DOCDIR = doc
-DOC_OUTPUT_FILE = pdf
-REPORT_FILE = ej4
-OTHER = *~ *.aux *.dvi *.toc *.bbl *.blg *.gz *.out *.thm *.ps *.idx *.ilg *.ind *.log *.fdb_latexmk *.fls
-
-
-all: $(BINDIR)/$(TARGET) $(SOURCES) $(BINDIR)/$(TARGET_B) $(SOURCES_B) $(BINDIR)/$(TARGET_C) $(SOURCES_C) $(BINDIR)/$(TARGET_D) $(SOURCES_D) $(BINDIR)/$(TARGET_E) $(SOURCES_E) 
-
-$(DOC_OUTPUT_FILE)/$(REPORT_FILE): 
-	latexmk -synctex=1 -interaction=nonstopmode -file-line-error -output-directory=$(DOC_OUTPUT_FILE) -pdf  $(DOCDIR)/$(REPORT_FILE).tex
-	cd $(DOC_OUTPUT_FILE)
-	rm -rf $(OTHER)
-	cd ..
+all: $(BINDIR)/$(TARGET) $(SOURCES) $(BINDIR)/$(TARGET_B) $(SOURCES_B) $(BINDIR)/$(TARGET_C) $(SOURCES_C) $(BINDIR)/$(TARGET_D) $(SOURCES_D) $(BINDIR)/$(TARGET_E) $(SOURCES_E)
 
 $(BINDIR)/$(TARGET): $(SOURCES)
 	@mkdir -p bin
@@ -62,7 +49,7 @@ clean:
 	@$(rm) $(BINDIR)/$(TARGET_C)
 	@$(rm) $(BINDIR)/$(TARGET_D)
 	@$(rm) $(BINDIR)/$(TARGET_E)
-	@echo "Executable removed!"
+	@echo "Output files removed!"
 
 .PHONY: clean
 purge: clean

@@ -1,4 +1,4 @@
-module decoder_tb;
+module newdecoder_tb;
 
     reg in1, in2; //decoder inputs for test
     wire out1, out2, out3, out4; //decoder output
