@@ -28,21 +28,20 @@ module full_adder_4bits(a,b,z,cin,cout);
     full_adder FourthFullAdder(a[3],b[3],z[3],cout[2],cout[3]);
 endmodule
 
-module BCDsum_4bits(a,b,z,cin,cout,x);
+module BCDsum_4bits(a,b,z,cin,cout);
     input [3:0] a;
     input [3:0] b;
-    wire [3:0] y;
+    reg [3:0] c;
+
     output wire [3:0] z;
     output wire [3:0] cout;
-    output wire [7:0] x;
-    input wire cin;
-    
-    wire [3:0] aux_cout;
-    full_adder_4bits sum(a,b,y,cin,aux_cout); 
-    
-    wire [3:0]c= y > 9 ? 6 : 0 ;
-    //wire [3:0]c= 0;
-    full_adder_4bits another(y,c,z,1'b0,cout);
-    assign x=z;
-    assign x[4]=aux_cout[3] || cout[3];
+    output wire cin;
+    full_adder_4bits sum(a,b,z,cin,cout);
+    initial begin
+        if(a+b>9)begin
+            assign c=a+6;
+        end 
+    end
 endmodule
+
+
