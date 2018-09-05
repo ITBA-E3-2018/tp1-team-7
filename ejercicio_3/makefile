@@ -22,12 +22,12 @@ all: $(BINDIR)/$(TARGET) $(SOURCES) $(BINDIR)/$(TARGET_B) $(SOURCES_B)
 $(BINDIR)/$(TARGET): $(SOURCES)
 	@mkdir -p bin
 	@$(COMPILER) $(SOURCES) $(CFLAGS) -o $@
-	@echo "Compilation complete - decoder!"
+	@echo "Compilation complete - bin/decoder!"
 
 
 $(BINDIR)/$(TARGET_B): $(SOURCES_B)
 	@$(COMPILER) $(SOURCES_B) $(CFLAGS) -o $@
-	@echo "Compilation complete - mux"
+	@echo "Compilation complete - bin/mux"
 
 
 .PHONY: clean

@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.8.18)  20 AUG 2018 15:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.4.26)  5 SEP 2018 14:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/marce/Escritorio/Electro3_TPS/tp1-team-7/ejercicio_4/ej4.tex
-(/home/marce/Escritorio/Electro3_TPS/tp1-team-7/ejercicio_4/ej4.tex
+**doc/ej4.tex
+(./doc/ej4.tex
 LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 7 language(s) loaded.
+Babel <3.12> and hyphenation patterns for 9 language(s) loaded.
 (../baseHoja.tex
 (/usr/share/texlive/texmf-dist/tex/latex/extsizes/extarticle.cls
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
@@ -669,7 +669,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@floatcapt=\box27
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2017/09/02 v2.17a AMS math features
+Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
@@ -745,7 +745,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
@@ -771,7 +771,7 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen121
 \Gin@req@width=\dimen122
@@ -1120,29 +1120,28 @@ LaTeX Font Info:    Redeclaring math symbol \varkappa on input line 260.
 LaTeX Font Info:    Redeclaring math symbol \hslash on input line 262.
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2018/02/14 3.18 The Babel package
+Package: babel 2017/06/29 3.12 The Babel package
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2018/02/14 3.18 Babel switching mechanism
+File: switch.def 2017/06/29 3.12 Babel switching mechanism
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2018/02/14 3.18 Babel common definitions
+File: babel.def 2017/06/29 3.12 Babel common definitions
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2017/06/29 3.12 Babel switching mechanism
+)
 \babel@savecnt=\count122
 \U@D=\dimen169
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@dirlevel=\count123
 )
-\l@british = a dialect from \language\l@english 
-\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(../BaseKarnaugh.tex) (./ej4.aux)
+(../BaseKarnaugh.tex) (pdf/ej4.aux)
 \openout1 = `ej4.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -1230,16 +1229,16 @@ LaTeX Font Info:    Redeclaring math symbol \oiintop on input line 5.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count124
+\scratchcounter=\count123
 \scratchdimen=\dimen170
 \scratchbox=\box41
-\nofMPsegments=\count125
-\nofMParguments=\count126
+\nofMPsegments=\count124
+\nofMParguments=\count125
 \everyMPshowfont=\toks37
-\MPscratchCnt=\count127
+\MPscratchCnt=\count126
 \MPscratchDim=\dimen171
-\MPnumerator=\count128
-\makeMPintoPDFobject=\count129
+\MPnumerator=\count127
+\makeMPintoPDFobject=\count128
 \everyMPtoPDFconversion=\toks38
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1312,27 +1311,30 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ] [2]
-<ImplementacionEj4.PDF, id=17, 730.09763pt x 513.28763pt>
-File: ImplementacionEj4.PDF Graphic file (type pdf)
-<use ImplementacionEj4.PDF>
-Package pdftex.def Info: ImplementacionEj4.PDF  used on input line 114.
-(pdftex.def)             Requested size: 469.47049pt x 330.05371pt.
- [3 <./ImplementacionEj4.PDF>] (./ej4.aux) ) 
+<data/ImplementacionEj4.PDF, id=17, pagebox=cropbox, 730.09763pt x 513.28763pt>
+
+File: data/ImplementacionEj4.PDF Graphic file (type pdf)
+<use data/ImplementacionEj4.PDF>
+Package pdftex.def Info: data/ImplementacionEj4.PDF  used on input line 114. on
+ input line 114.
+Package pdftex.def Info: Requested size: 469.47049pt x 330.05371pt on input lin
+e 114.
+ [3 <./data/ImplementacionEj4.PDF>] (pdf/ej4.aux) ) 
 Here is how much of TeX's memory you used:
- 15194 strings out of 494847
- 284690 string characters out of 6179080
- 339991 words of memory out of 5000000
- 18141 multiletter control sequences out of 15000+600000
+ 15158 strings out of 494813
+ 283907 string characters out of 6178109
+ 337938 words of memory out of 5000000
+ 18103 multiletter control sequences out of 15000+600000
  39670 words of font info for 59 fonts, out of 8000000 for 9000
- 59 hyphenation exceptions out of 8191
- 57i,15n,69p,491b,841s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/font
-s/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/fouri
-er/fourier-mex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fo
-urier-ms.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on ej4.pdf (3 pages, 84514 bytes).
+ 81 hyphenation exceptions out of 8191
+ 57i,15n,69p,436b,841s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-di
+st/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/publi
+c/fourier/fourier-mex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fou
+rier/fourier-ms.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/put
+b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on pdf/ej4.pdf (3 pages, 84519 bytes).
 PDF statistics:
  43 PDF objects out of 1000 (max. 8388607)
  31 compressed objects within 1 object stream
