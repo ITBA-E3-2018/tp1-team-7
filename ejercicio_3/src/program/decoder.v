@@ -18,7 +18,6 @@ module decoder (x1, x2, a, b, c, d);
            a = 'b1; b = 'b1; c = 'b1; d = 'b1; // in case of error every output sets to logic 1
         end
 
-
       end
 
       else if (x1==1)begin
