@@ -59,15 +59,12 @@ A multiplexer, also known as 'mux', is another combinational circuit that has 2^
 \end{figure}
 
 
-\subsection*{Compilation}
-In order to compile the decoder and all test cases to bin folder this command must be run
-\begin{lstlisting}
-make all
-\end{lstlisting}
+\subsection*{About the code}
 
-\subsection*{Usage}
-Exceute each program inside bin folder to run test cases of each module
+In one hand, both mux.v and decoder.v modules, use conditional statements to describe their behaviour. This way is easier for the user to understand how the devices work.
+Each module has its own test bench which considers all possible inputs.
 
-
+On the other hand, newmux.v and newdecoder.v, have a variable parameter which changes the number of inputs the devices could have. The way that they are implemented is more difficult to understand than the first one, but it is shorter. Another difference is that in this case the input is not just one bit, is an array of all the input's bits together. 
+  
 
 \end{document}

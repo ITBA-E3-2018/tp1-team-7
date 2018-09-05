@@ -1,3 +1,7 @@
+//decoder (2:4)
+// x1, x2: decoder's inputs (possible values: 0 or 1)
+//a, b, c, d: decoder's outputs (possible values: 0 or 1)
+
 module decoder (x1, x2, a, b, c, d);
 
     input x1, x2;

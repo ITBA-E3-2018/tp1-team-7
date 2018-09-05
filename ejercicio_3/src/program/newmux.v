@@ -6,7 +6,7 @@
 //select: array of m bits
 //out: one bit 
 
-module mux #(parameter m = 2)(
+module newmux #(parameter m = 2)(
     input [m-1:0] select,
     input [(2**m)-1:0] in,
     output out
