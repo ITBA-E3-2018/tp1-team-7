@@ -31,26 +31,26 @@ endmodule
 module BCDsum_4bits(a,b,z,cin,cout);
     input [3:0] a;
     input [3:0] b;
-    reg [3:0] c;
-
-    output wire [3:0] z;
+    output wire [3:0] y;
+    output wire [7:0] z;
     output wire [3:0] cout;
-    output wire cin;
-    full_adder_4bits sum(a,b,z,cin,cout);
-    initial begin
-        if(a+b>9)begin
-            assign c=a+6;
-        end 
-    end
+    input wire cin;
+    
+    wire [3:0] aux_cout;
+    full_adder_4bits sum(a,b,y,cin,aux_cout);
+    wire [3:0]c= y > 9 ? 6 : 0;
+    full_adder_4bits another(y,c,z,1'b0,cout);
+    assign z[4]=cout[3];
+    
+    
 endmodule
-
 
 module main;
     reg [3:0]a;
     reg [3:0]b;
     wire init_cin=0;
     wire [3:0]cout;
-    wire [3:0]z;
+    wire [7:0]z;
     reg [7:0]answer;
     reg erra;
     reg errb;
@@ -72,15 +72,16 @@ module main;
             $display("b is not a BCD digit");
         end 
         else begin
-            for(i=0;i<4;i=i+1)begin
+            /* for(i=0;i<4;i=i+1)begin
                 answer[i]=z[i];
             end
             answer[4]=cout[3];
             for(i=5;i<=7;i=i+1)begin 
                 answer[i]=0;
             end
-            
+             */
             $display("%b",answer);
-        end
+        end 
     end
+
 endmodule
