@@ -39,10 +39,19 @@ module BCDsum_4bits(a,b,z,cin,cout,x);
     
     wire [3:0] aux_cout;
     full_adder_4bits sum(a,b,y,cin,aux_cout); 
-    
-    wire [3:0]c= y > 9 ? 6 : 0 ;
-    //wire [3:0]c= 0;
+    wire [3:0]c;
+
+    assign c = y > 9  || aux_cout[3] ? 6 : 0;
+
     full_adder_4bits another(y,c,z,1'b0,cout);
-    assign x=z;
-    assign x[4]=aux_cout[3] || cout[3];
+    assign x[0]=z[0];
+    assign x[1]=z[1];
+    assign x[2]=z[2];
+    assign x[3]=z[3];
+    assign x[4]=aux_cout[3];
+    assign x[5]=0;
+    assign x[6]=0;
+    assign x[7]=0;
 endmodule
+
+
