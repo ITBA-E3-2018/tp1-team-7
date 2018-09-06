@@ -22,9 +22,16 @@ def main():
     if b < 0 or c < 0:
         print("ERROR: Negative amount of bits are invalid")
         return 0
-    if b == 0 or c == 0:
+    if b == 0 and c == 0:
         print("ERROR: There are no bits to respresent number")
         return 0
+    if b > 60:
+	print("ERROR: B is too big")
+        return 0
+    if c > 60:
+        print("ERROR: B is too big")
+        return 0
+
 
     l = 0
     r = 0
