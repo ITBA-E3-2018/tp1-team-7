@@ -15,13 +15,13 @@ BINDIR   = bin
 
 SOURCES  := $(wildcard $(SRCDIR)/program/*.v $(SRCDIR)/tests/decoder_tb.v ) 
 SOURCES_B  := $(wildcard $(SRCDIR)/program/*.v $(SRCDIR)/tests/mux_tb.v )
-SOURCES_C  := $(wildcard $(SRCDIR)/program/*.v $(SRCDIR)/tests/newdecoder_tb.v ) 
-SOURCES_D  := $(wildcard $(SRCDIR)/program/*.v $(SRCDIR)/tests/newmux_tb.v )
+SOURCES_C  := $(wildcard $(SRCDIR)/program/*.v $(SRCDIR)/tests/newmux_tb.v ) 
+SOURCES_D  := $(wildcard $(SRCDIR)/program/*.v $(SRCDIR)/tests/newdecoder_tb.v )
 
 OBJECTS  := $(SOURCES:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 rm       = rm -f
 
-all: $(BINDIR)/$(TARGET) $(SOURCES) $(BINDIR)/$(TARGET_B) $(SOURCES_B) $(BINDIR)/$(TARGET_C) $(SOURCES_D) 
+all: $(BINDIR)/$(TARGET) $(SOURCES) $(BINDIR)/$(TARGET_B) $(SOURCES_B) $(BINDIR)/$(TARGET_C) $(SOURCES_C) $(BINDIR)/$(TARGET_D) $(SOURCES_D)
 
 $(BINDIR)/$(TARGET): $(SOURCES)
 	@mkdir -p bin
