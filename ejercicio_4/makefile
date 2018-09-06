@@ -27,7 +27,6 @@ $(BINDIR)/$(TARGET): $(SOURCES)
 .PHONY: clean
 clean: 
 	@$(rm) $(BINDIR)/$(TARGET)
-	@$(rm) $(BINDIR)/$(TARGET_B)
 	@echo "Output removed!"
 
 .PHONY: clean

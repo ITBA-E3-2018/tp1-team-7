@@ -21,7 +21,6 @@ module full_adder_4bits(a,b,z,cin,cout);
     input cin;
     output [3:0] cout;
     output [3:0] z;
-
     full_adder FirstFullAdder(a[0],b[0],z[0],cin,cout[0]);
     full_adder SecondFullAdder(a[1],b[1],z[1],cout[0],cout[1]);
     full_adder ThirdFullAdder(a[2],b[2],z[2],cout[1],cout[2]);
