@@ -13,8 +13,8 @@ The parameters are:
 All inputs should be numbers. Also b and c can't be 0 at the same time.
 All these things are validated.
 
-The program logic uses simple formulas to solve the problem separately in signed and unsgined case.
-The inituition beyond the formulas was obtained by looking at the composition of binary number.
+The program logic uses simple formulas to solve the problem separately in signed and unsgined cases.
+The inituition beyond the formulas was obtained by looking at the composition of a binary number.
 \begin{figure}[H]
   \begin{centering}
   \includegraphics[scale=1]{data/bits.png}
@@ -23,7 +23,7 @@ The inituition beyond the formulas was obtained by looking at the composition of
 \end{figure}
 As lowest significant bit worths $2^{-c}$ then the resolution is $2^{-c}$ and this works in both signed and unsigned cases
 \\
-Thought, to compute the range we need to separate in two cases, looking at which are the greatest (we call it $r$) and lower (we call it $l$) numbers we can make in each case
+Thought, to compute the range we need to separate in two cases, looking at which is the greater (we call it $r$) and the lower (we call it $l$) number in each case.
 In the unsgined case the lower number is 0 and the highest will be
 $$r=\underbrace{2^{-c}+2^{-c+1}+...+2^{-1}}_{1-2^{-c}}+\underbrace{1+2^{1}+...+2^{b-1}}_{2^{b}-1}=2^{b}-2^{-c}$$
 So the resolution is just $r-l=2^{b}-2^{-c}$
