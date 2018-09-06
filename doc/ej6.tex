@@ -32,6 +32,8 @@ Now we will analize in more depth how the program works
 \end{figure}
 
 The ALU makes sure the output and flags are correct accoring to opcodes and inputs.
+Note: the carry flag in the difference operation is the result of the twos complement sum, it is not the borrow.
+
 \subsection*{Operations}
 There are 8 operations
 \begin{itemize}
@@ -53,7 +55,7 @@ There are four flags
   \item \textbf{carry/overflow} (Managed by 4 bit adder modules)
   \item \textbf{zero/negative} (Easily managed directly by ALU)
 \end{itemize}
-It is important to note that operations that do not use carry and overflow make these bits to be 0.
+It is important to know that operations which do not use carry and overflow set these bits to be 0.
 
 \subsection*{Mux}
 \begin{figure}[H]
